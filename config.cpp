@@ -21,7 +21,8 @@ class CfgPatches {
 		"TGV_Villain_Base",
 		"TGV_test_Villain",
 		"TGV_V_Mauriceabdultamer",
-		"TGV_V_Generalalidbaba"
+		"TGV_V_Generalalidbaba",
+		"TGV_V_Lemmymotorheadovitch"
 
 		
 		

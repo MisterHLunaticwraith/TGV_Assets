@@ -69,3 +69,14 @@ scope =2;
 author ="Mr H.";
 editorPreview="\TGV_Assets\paa\VillainsMugshots\alidbaba.jpg";
 };
+
+// CfgVehicles
+class TGV_V_Lemmymotorheadovitch: TGV_Villain_Base
+{
+displayName ="Lemmy Motorheadovitch";
+tgvLoadOut[] ={{},{},{"rhs_weap_makarov_pm","","","",{"rhs_mag_9x18_8_57N181S",8},{},""},{"rhs_uniform_vdv_emr",{{"rhs_1PN138",1},{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"MRH_Map",1},{"rhs_mag_9x18_8_57N181S",3,8}}},{"rhs_vest_commander",{{"rhs_mag_rdg2_white",2,1}}},{},"rhs_beret_vdv2","G_Aviator",{"Binocular","","","",{},{},""},{"","","ItemRadio","ItemCompass","ItemWatch",""}};
+identityTypes[] ={"TGV_V_Lemmymotorheadovitch"};
+scope =2;
+author ="Mr H.";
+editorPreview="\TGV_Assets\paa\VillainsMugshots\lemmy.jpg";
+};

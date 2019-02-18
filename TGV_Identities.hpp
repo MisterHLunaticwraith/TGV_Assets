@@ -27,3 +27,14 @@ glasses ="None";
 speaker ="male03per";
 pitch =1.1
 };
+
+// CfgIdentities
+class TGV_V_Lemmymotorheadovitch
+{
+name ="Lemmy Motorheadovitch";
+nameSound = "Givens";
+face ="GreekHead_A3_03";
+glasses ="G_Aviator";
+speaker ="rhs_male01rus";
+pitch =0.93
+};
