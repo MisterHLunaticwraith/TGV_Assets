@@ -468,6 +468,12 @@ captionText = "Un fusil de précision M2010";
 picture = "\TGV_Assets\paa\TabPics\M2010.jpg";
 };
 
+class TGV_MK11SR25
+{
+captionText = "Un fusil de précision Mk11SR25"; 
+picture = "\TGV_Assets\paa\TabPics\Mk11SR25.jpg";
+};
+
 class TGV_fluVirus
 {
 captionText = "Un virus"; 
