@@ -80,3 +80,13 @@ scope =2;
 author ="Mr H.";
 editorPreview="\TGV_Assets\paa\VillainsMugshots\lemmy.jpg";
 };
+
+class TGV_V_JeanClaudeDiBongo: TGV_Villain_Base
+{
+displayName ="Jean Claude Di Bongo";
+tgvLoadOut[] ={{"rhs_weap_akm","rhs_acc_dtkakm","","",{"rhs_30Rnd_762x39mm",30},{},""},{},{},{"LOP_U_AFR_Fatigue_04",{{"MRH_Map",1},{"rhs_30Rnd_762x39mm",2,30},{"rhs_mag_rgd5",1,1}}},{"LOP_V_6Sh92_Radio_OLV",{}},{},"H_Beret_blk","rhsusf_shemagh_grn",{},{"","","","ItemCompass","",""}};
+identityTypes[] ={"TGV_V_JeanClaudeDiBongo"};
+scope =2;
+author ="Mr H.";
+editorPreview="\TGV_Assets\paa\VillainsMugshots\dibongo.jpg";
+};

@@ -44,6 +44,8 @@ class TGV // Defines the "owner"
 		file = "\TGV_Assets\Functions";
 			class welcomeMenu
 			{};
+			class welcomeMenuInit
+			{};
 			
 		};
 	class TGV_VillainGenerAtor// category

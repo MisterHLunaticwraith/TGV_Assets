@@ -22,17 +22,20 @@ class CfgPatches {
 		"TGV_test_Villain",
 		"TGV_V_Mauriceabdultamer",
 		"TGV_V_Generalalidbaba",
-		"TGV_V_Lemmymotorheadovitch"
+		"TGV_V_Lemmymotorheadovitch",
+		"TGV_V_JeanClaudeDiBongo",
+		"TGV_SDV_01_F",
+		"TGV_Boat_Transport_01_F"
 
 		
 		
 		}; //
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
-		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main"}; // achequer
-		version = 1.0.2;
-		versionStr = "1.0.2";
-		versionAr[] = {1,0,2};
+		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
+		version = 1.0.3;
+		versionStr = "1.0.3";
+		versionAr[] = {1,0,3};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";
@@ -40,6 +43,24 @@ class CfgPatches {
 	
 	};
 };
+class CfgMods {
+    class TGV_Assets {
+        dir = "@TGVCustomAssets";
+        name = "TGV Custom Assets";
+        picture = "\TGV_Assets\paa\logoA3Tgv.paa";
+		logo = "\TGV_Assets\paa\Logopaa\TGV(1).paa";
+        hidePicture = "false";
+        hideName = "false";
+        actionName = "Website";
+        action = "http://www.teamtgv.com/site/";
+        description = "Issue Tracker: https://github.com/MisterHLunaticwraith/TGV_Assets";
+    };
+};
+// ctab fix
+class cTab_RscMapControl {
+    widthRailWay = 1;
+};
+
 #include "\TGV_Assets\cfgSettings.hpp"
 #define QUOTE "
 #define QUOTES(ARG) QUOTE##ARG##QUOTE
@@ -143,6 +164,7 @@ class cfgVehicles
 #include "\TGV_Assets\TGV_items.hpp"
 #include "\TGV_Assets\TGV_clothesV.hpp"
 #include "\TGV_Assets\TGV_Villains.hpp"
+#include "\TGV_Assets\TGV_Vehicles.hpp"
 };
 class cfgMRHFactionSounds 
 {
@@ -260,6 +282,14 @@ class Extended_PreInit_EventHandlers
    };    
  */
 };
+class Extended_PostInit_EventHandlers
+{
+   class TGV_CBA_XEH
+   {
+      clientInit = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh.sqf'";
+   }; 
+
+};
 
 class CfgFactionClasses
 {
@@ -267,6 +297,10 @@ class CfgFactionClasses
 	class TGV_Vilains: NO_CATEGORY
 	{
 		displayName = "Méchants des TGV";
+	};
+	class TGV_SeaVehicles: NO_CATEGORY
+	{
+		displayName = "Bateaux et sous marins";
 	};
 };
 

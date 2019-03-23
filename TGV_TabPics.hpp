@@ -18,6 +18,12 @@ captionText ="Lemmy Motorheadovitch";
 picture = "\TGV_Assets\paa\VillainsMugshots\lemmy.jpg";
 };
 
+class TGV_V_JeanClaudeDiBongo
+{
+captionText ="Jean Claude Di Bongo";
+picture = "\TGV_Assets\paa\VillainsMugshots\dibongo.jpg";
+};
+
 class TGV_RadiosAddon //must be unique, can be anything,good practice is to tag with your handle.
 {
 captionText = "Répartition Radios"; //simple caption text, mandatory, leave "" if you do not want a caption

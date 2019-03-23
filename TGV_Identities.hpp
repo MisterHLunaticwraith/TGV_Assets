@@ -38,3 +38,13 @@ glasses ="G_Aviator";
 speaker ="rhs_male01rus";
 pitch =0.93
 };
+
+class TGV_V_JeanClaudeDiBongo
+{
+name ="Jean Claude Di Bongo";
+nameSound = "Givens";
+face ="AfricanHead_02";
+glasses ="rhsusf_shemagh_grn";
+speaker ="male02fre";
+pitch =1.03
+};
