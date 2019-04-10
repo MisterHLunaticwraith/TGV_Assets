@@ -76,6 +76,8 @@ class TGV // Defines the "owner"
 		{};
 		class generateSoldierTabDataAndPic
 		{};
+		class postInitLoadOut
+		{};
 		
 	};
 	
