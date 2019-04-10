@@ -33,9 +33,9 @@ class CfgPatches {
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
-		version = 1.0.4;
-		versionStr = "1.0.4";
-		versionAr[] = {1,0,4};
+		version = 1.0.5;
+		versionStr = "1.0.5";
+		versionAr[] = {1,0,5};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";
@@ -67,6 +67,19 @@ class cTab_RscMapControl {
 class cfgSounds
 {
 #include "\TGV_Assets\Sounds\cfgsounds.hpp"
+};
+
+class cfgMusic
+{
+#include "\TGV_Assets\Sounds\cfgsounds.hpp"
+};
+
+class cfgMusicClasses
+{
+	class TGV_SoundTrack
+	{
+		displayName= "Musiques TGV"
+	};
 };
 class cfgFunctions
 {
@@ -170,7 +183,7 @@ class cfgMRHFactionSounds
 {
 	class TGVRadio 
 	{
-	allSounds[] = {"TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_HesThere","TGV_Radio_MindTrick","TGV_Radio_LikeAStone","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife"}; 
+	allSounds[] = {"TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_HesThere","TGV_Radio_MindTrick","TGV_Radio_LikeAStone","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife","TGV_Radio_FortunateSon","TGV_Radio_DeadFlagBlues","TGV_Radio_DiesIrae","TGV_Radio_PaintItBlack"}; 
 	};
 };
 class CfgUnitInsignia

@@ -1,0 +1,10 @@
+params ["_unit"];
+
+_loadOut = getArray (configFile>>"cfgVehicles">>typeOf _unit>>"tgvLoadOut");
+_identity = (getArray (configFile>>"cfgVehicles">>typeOf _unit>>"identityTypes")) select 0;
+_unit setUnitLoadout _loadOut;
+
+[[_unit,_identity],{
+	params ["_unit","_identity"];
+ _unit setIdentity _identity;	
+}] RemoteExec ["Call",0,true];

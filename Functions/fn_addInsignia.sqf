@@ -20,7 +20,5 @@ if (_uid == "76561198151956584") then {[player, "NIAK"] call BIS_fnc_setUnitInsi
 player addEventHandler ["Respawn", {
 	call TGV_fnc_addInsignia;
 }];
-["ace_arsenal_displayClosed", {
-	call TGV_fnc_addInsignia;
-}] call CBA_fnc_addEventHandler;
+
 };

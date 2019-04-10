@@ -1,4 +1,4 @@
-//["acex_rationConsumed", [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated]] call CBA_fnc_localEvent;
+// cba event handlers
 
 ["acex_rationConsumed",{ 
 params ["_player", "_consumeItem", "_replacementItem", "_thirstQuenched", "_hungerSatiated"];
@@ -11,8 +11,18 @@ if (_consumeItem in ["TGV_Beer_Item","TGV_Beer_Item_half"]) then
 	};
 [_message] call MRH_fnc_MilsimTools_DebugTools_trace;
 }] call CBA_fnc_addEventHandler;
-["TGV XEH postinit executed"] call MRH_fnc_MilsimTools_DebugTools_trace;
 
+["ace_arsenal_displayClosed", {
+	call TGV_fnc_addInsignia;
+}] call CBA_fnc_addEventHandler;
+
+["MRH_admin_menu_playerloadoutchanged_eh",{
+	params ["_adminPlayer","_remotePlayer","_loadout","_loadoutChanged"];
+	[[],{call TGV_fnc_addInsignia;}] RemoteExec ["Call",_remotePlayer];
+}] call CBA_fnc_addEventHandler;
+
+//TGV welcome menu init
 [{(player == player) && (!isNull (findDisplay 46))}, {
     call TGV_fnc_welcomeMenuInit;
 }] call CBA_fnc_waitUntilAndExecute;
+["TGV XEH postinit executed"] call MRH_fnc_MilsimTools_DebugTools_trace;
