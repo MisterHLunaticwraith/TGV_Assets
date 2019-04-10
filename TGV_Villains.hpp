@@ -90,3 +90,13 @@ scope =2;
 author ="Mr H.";
 editorPreview="\TGV_Assets\paa\VillainsMugshots\dibongo.jpg";
 };
+
+class TGV_V_Frankbanimarama: TGV_Villain_Base
+{
+displayName ="Frank Banimarama";
+tgvLoadOut[] ={{},{},{"rhsusf_weap_m9","","","",{"rhsusf_mag_15Rnd_9x19_JHP",15},{},""},{"LOP_U_CHR_Functionary_01",{{"ACE_Banana",1},{"ACE_Can_Franta",1},{"ACE_Cellphone",1},{"rhs_mag_rgd5",1,1},{"rhsusf_mag_15Rnd_9x19_FMJ",3,15}}},{},{},"","",{},{"ItemMap","","","ItemCompass","",""}};
+identityTypes[] ={"TGV_V_Frankbanimarama"};
+scope =2;
+author ="o0 Niakiniak 0o";
+editorPreview="\TGV_Assets\paa\VillainsMugshots\frank1.jpg";
+};

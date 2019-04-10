@@ -486,6 +486,11 @@ captionText = "Un virus";
 picture = "\TGV_Assets\paa\TabPics\flu.jpg";
 };
 
+class TGV_V_Frankbanimarama
+{
+captionText ="Frank Banimarama";
+picture = "\TGV_Assets\paa\VillainsMugshots\frank1.jpg";
+};
 
 /*template
 class TGV_

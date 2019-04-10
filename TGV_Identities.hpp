@@ -48,3 +48,13 @@ glasses ="rhsusf_shemagh_grn";
 speaker ="male02fre";
 pitch =1.03
 };
+
+class TGV_V_Frankbanimarama
+{
+name ="Frank Banimarama";
+nameSound = "Givens";
+face ="AfricanHead_02";
+glasses ="None";
+speaker ="male03fre";
+pitch =0.91
+};

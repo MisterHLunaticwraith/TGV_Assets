@@ -25,7 +25,8 @@ class CfgPatches {
 		"TGV_V_Lemmymotorheadovitch",
 		"TGV_V_JeanClaudeDiBongo",
 		"TGV_SDV_01_F",
-		"TGV_Boat_Transport_01_F"
+		"TGV_Boat_Transport_01_F",
+		"TGV_V_Frankbanimarama"
 
 		
 		
@@ -33,9 +34,9 @@ class CfgPatches {
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
-		version = 1.0.5;
-		versionStr = "1.0.5";
-		versionAr[] = {1,0,5};
+		version = 1.0.6;
+		versionStr = "1.0.6";
+		versionAr[] = {1,0,6};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";
