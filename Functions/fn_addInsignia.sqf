@@ -1,5 +1,12 @@
 [] spawn {
 	waitUntil {player == player};
+	_disabled = ["TGV_DisablePatch"] call cba_settings_fnc_get;
+	if (_disabled) exitWith {};
+	_disabledForMedic =  ["TGV_DisablePatchOnlyMedic"] call cba_settings_fnc_get;
+	_isMedic = [player] call ace_common_fnc_isMedic;
+	if (_disabledForMedic && _isMedic) exitWith {};
+
+
 	[player, "TGV_reset"] call BIS_fnc_setUnitInsignia;
 	sleep 2;
 

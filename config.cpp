@@ -34,9 +34,9 @@ class CfgPatches {
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
-		version = 1.0.6;
-		versionStr = "1.0.6";
-		versionAr[] = {1,0,6};
+		version = 1.0.7;
+		versionStr = "1.0.7";
+		versionAr[] = {1,0,7};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";

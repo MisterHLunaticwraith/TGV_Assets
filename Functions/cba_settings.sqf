@@ -4,3 +4,7 @@ _defaultText = "<img size = '15' image ='\TGV_Assets\paa\armaOpBack.paa'/>Bienve
 ["TGV_WelcomeMenuText", "EDITBOX",   ["Texte du menu d'acceuil","Le menu d'acceuil est automatiquement appelé par le serveur quand un client se connecte, vous pouvez éditer le message que montrera ce menu d'acceuil en changeant ce réglage. Accepte le texte structuré"], ["Réglages TGV", "Réglages du mod TGV"],_defaultText,1] call cba_settings_fnc_init;
 
 ["TGV_WelcomeMenuDelay", "EDITBOX",   ["Délais pour afficher le menu d'acceuil","Temps avant que le menu d'accueil de s'ouvre"], ["Réglages TGV", "Réglages du mod TGV"],"15",1] call cba_settings_fnc_init;
+
+["TGV_DisablePatch", "CHECKBOX",   ["Desactiver les patchs perso pour tous","Ce réglage empêche les joueurs de porter leur patch perso (pas celui TGV)"], ["Réglages TGV", "Réglages du mod TGV"],false,1] call cba_settings_fnc_init;
+
+["TGV_DisablePatchOnlyMedic", "CHECKBOX",   ["Desactiver les patchs perso pour les medics seulement","Ce réglage empêche les joueurs de porter leur patch perso (pas celui TGV) seulement s'ils son médics, auquel cas le patch medic de MilsimTools s'appliquera"], ["Réglages TGV", "Réglages du mod TGV"],true,1] call cba_settings_fnc_init;
