@@ -80,6 +80,19 @@ class TGV // Defines the "owner"
 		{};
 		
 	};
+	class TGV_wagesFuncs
+		{
+		tag = "TGV";
+		file = "\TGV_Assets\Functions";
+			class playerWagesTracker
+			{};
+			class serverHandleWages
+			{};
+			class fillWages
+			{};
+			
+			
+		};
 	
 };
 		

@@ -283,6 +283,7 @@ class RscDisPlayMain : RscStandardDisplay
 #include "\TGV_Assets\dialogs\welcomeDial.hpp"
 #include "\TGV_Assets\dialogs\villainCreator.hpp"
 #include "\TGV_Assets\dialogs\genResults.hpp"
+#include "\TGV_Assets\dialogs\paiescreen.hpp"
 class Extended_PreInit_EventHandlers
 {
    class TGV_CBA_Settings
@@ -301,6 +302,11 @@ class Extended_PostInit_EventHandlers
    class TGV_CBA_XEH
    {
       clientInit = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh.sqf'";
+   }; 
+
+   class TGV_CBA_XEH_server
+   {
+      serverInit = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh_server.sqf'";
    }; 
 
 };
