@@ -492,6 +492,35 @@ captionText ="Frank Banimarama";
 picture = "\TGV_Assets\paa\VillainsMugshots\frank1.jpg";
 };
 
+class TGV_3_Execution
+{
+captionText = "SMEPP: Execution"; 
+picture = "\TGV_Assets\paa\TabPics\BriefingCards\SExecution.paa";
+};
+
+class TGV_2_Mission
+{
+captionText = "SMEPP: Mission"; 
+picture = "\TGV_Assets\paa\TabPics\BriefingCards\SMission.paa";
+};
+
+class TGV_4_Personnels
+{
+captionText = "SMEPP: Personnels"; 
+picture = "\TGV_Assets\paa\TabPics\BriefingCards\Sperso.paa";
+};
+
+class TGV_5_PointsParticuliers
+{
+captionText = "SMEPP: Points particuliers"; 
+picture = "\TGV_Assets\paa\TabPics\BriefingCards\SPP.paa";
+};
+
+class TGV_1_Situation
+{
+captionText = "SMEPP: Situation"; 
+picture = "\TGV_Assets\paa\TabPics\BriefingCards\SSituation.paa";
+};
 /*template
 class TGV_
 {

@@ -21,6 +21,24 @@
 					
 				};
             };
+
+            class MRH_AdminActions {
+                displayName = "MRH special's";
+				condition = "private _uid = getPlayerUid player;(_uid isEqualTo '76561197973693960')";
+				exceptions[] = {"isNotSitting"};
+				statement = "";
+				icon = "";
+
+				class MRH_SaluteMe
+				{
+					displayName = "Se faire saluer!";
+					condition = "private _uid = getPlayerUid player;(_uid isEqualTo '76561197973693960')";
+					exceptions[] = {"isNotSitting"};
+					statement = "call TGV_fnc_saluteH";
+					icon = "";
+					
+				};
+            };
         };
     };
     /*

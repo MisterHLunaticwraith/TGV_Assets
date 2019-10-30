@@ -21,6 +21,16 @@ if (_consumeItem in ["TGV_Beer_Item","TGV_Beer_Item_half"]) then
 	[[],{call TGV_fnc_addInsignia;}] RemoteExec ["Call",_remotePlayer];
 }] call CBA_fnc_addEventHandler;
 
+["TGV_SaluteMRH_event",{
+	params ["_MRH"];
+	if !(hasInterface) exitWith {};
+	if (player isEqualTo _MRH) exitWith {}; //I don't bow to noone bitches!
+	if ((player distance _MRH)>20) exitWith {};
+	player action ["salute",player];
+	hint "Ici on salue son supérieur!";
+	
+}] call CBA_fnc_addEventHandler;
+
 //TGV welcome menu init
 [{(player == player) && (!isNull (findDisplay 46))}, {
     call TGV_fnc_welcomeMenuInit;

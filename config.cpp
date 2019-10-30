@@ -34,9 +34,9 @@ class CfgPatches {
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
-		version = 1.0.7;
-		versionStr = "1.0.7";
-		versionAr[] = {1,0,7};
+		version = 1.0.8;
+		versionStr = "1.0.8";
+		versionAr[] = {1,0,8};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";
@@ -184,7 +184,7 @@ class cfgMRHFactionSounds
 {
 	class TGVRadio 
 	{
-	allSounds[] = {"TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_HesThere","TGV_Radio_MindTrick","TGV_Radio_LikeAStone","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife","TGV_Radio_FortunateSon","TGV_Radio_DeadFlagBlues","TGV_Radio_DiesIrae","TGV_Radio_PaintItBlack"}; 
+	allSounds[] = {"TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife","TGV_Radio_FortunateSon","TGV_Radio_DeadFlagBlues","TGV_Radio_DiesIrae","TGV_Radio_PaintItBlack","TGV_Radio_Satyagraha"}; 
 	};
 };
 class CfgUnitInsignia
@@ -213,10 +213,10 @@ class RscDisplayMPInterrupt { //OR RscDisplayMPInterrupt for MP pause
 	
 	};
 };
-
+//start with skip logos
 class RscStandardDisplay;
 class RscControlsGroup;
-
+class RscText;
 class RscPictureKeepAspect;
 class Logo;
 class RscDisplayStart: RscStandardDisplay
@@ -245,7 +245,230 @@ class RscDisplayStart: RscStandardDisplay
 		};
 	};
 };
-
+//-------start with logos
+class RscTitles
+{
+	class SplashNoise
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=11;
+		fadein=0;
+		fadeout=0;
+		controls[]=
+		{
+			"BackgroundNoise"
+		};
+		class BackgroundNoise: RscPicture
+		{
+			text="\TGV_Assets\paa\armaOpBack.paa";
+			colorText[]={1,1,1,0.69999999};
+			x="safezoneXAbs";
+			y="safezoneY";
+			w="safezoneWAbs";
+			h="safezoneH";
+		};
+	};
+	class SplashBohemia
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=3;
+		fadein=0;
+		fadeout=0;
+		name="$STR_A3_SplashBohemia_0";
+		controls[]=
+		{
+			"Picture",
+			"TextPresents"
+		};
+		class Picture: RscPictureKeepAspect
+		{
+			idc=1200;
+			text="";
+			x="SafeZoneX + SafeZoneW / 2 - (48 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (31.7 * 		(0.025 * SafezoneH)) / 2";
+			w="48 * 		(0.01875 * SafezoneH)";
+			h="24 * 		(0.025 * SafezoneH)";
+		};
+		class TextPresents: RscText
+		{
+			idc=1000;
+			text="LA TEAM TGV PRESENTE";
+			style=2;
+			sizeEx="0.03*SafezoneH";
+			shadow=0;
+			x="SafeZoneX + SafeZoneW / 2 - (46.5 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH - (0.505 * SafezoneH)";
+			w="48 * 		(0.01875 * SafezoneH)";
+			h="0.03 * SafezoneH";
+		};
+	};
+	class SplashArma3
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=3;
+		fadein=0;
+		fadeout=0;
+		name="$STR_A3_SplashArma3_0";
+		controls[]=
+		{
+			"Picture"
+		};
+		class Picture: RscPicture
+		{
+			idc=1200;
+			text="\TGV_Assets\paa\logoA3Tgv.paa";
+			x="0.5 - 10 * 		(0.01875 * SafezoneH)";
+			y="0.5 - 6 * 		(0.025 * SafezoneH)";
+			w="20 * 		(0.01875 * SafezoneH)";
+			h="10 * 		(0.025 * SafezoneH)";
+		};
+	};
+	class SplashArma3Apex: SplashArma3
+	{
+		class Picture: Picture
+		{
+			text="\TGV_Assets\paa\logoA3Tgv.paa";
+			y="0.5 - 7 * 		(0.025 * SafezoneH)";
+		};
+	};
+	class SplashArma3Lite
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=3;
+		fadein=0;
+		fadeout=0;
+		controls[]=
+		{
+			"Picture",
+			"Tagline"
+		};
+		class Picture: RscPicture
+		{
+			idc=1200;
+			text="\TGV_Assets\paa\logoA3Tgv.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (20 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (17 * 		(0.025 * SafezoneH)) / 2";
+			w="20 * 		(0.01875 * SafezoneH)";
+			h="10 * 		(0.025 * SafezoneH)";
+		};
+		class Tagline: RscPicture
+		{
+			idc=1201;
+			text="\A3\Ui_f\data\IGUI\RscTitles\SplashTagline\ThisIsWar_ca.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (16.1 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (2.9 * 		(0.025 * SafezoneH)) / 2";
+			w="16.1 * 		(0.01875 * SafezoneH)";
+			h="8.05 * 		(0.025 * SafezoneH)";
+		};
+	};
+	class SplashTagline
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=3;
+		fadein=0;
+		fadeout=0;
+		name="$STR_A3_SplashTagline_0";
+		controls[]=
+		{
+			"Picture"
+		};
+		class Picture: RscPicture
+		{
+			idc=1200;
+			text="\A3\Ui_f\data\IGUI\RscTitles\SplashTagline\ThisIsWar_ca.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (48 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (31.7 * 		(0.025 * SafezoneH)) / 2";
+			w="48 * 		(0.01875 * SafezoneH)";
+			h="24 * 		(0.025 * SafezoneH)";
+		};
+	};
+	class SplashESRB
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=4;
+		fadein=0;
+		fadeout=0;
+		name="$STR_A3_SplashESRB_0";
+		controls[]=
+		{
+			"Picture"
+		};
+		class Picture: RscPicture
+		{
+			text="\A3\Ui_f\data\IGUI\RscTitles\SplashESRB\ESRB_co.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (72 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (36 * 		(0.025 * SafezoneH)) / 2";
+			w="72 * 		(0.01875 * SafezoneH)";
+			h="36 * 		(0.025 * SafezoneH)";
+		};
+	};
+	class SplashCopyright
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=3;
+		fadein=0;
+		fadeout=0;
+		name="$STR_A3_SplashCopyright_0";
+		controls[]=
+		{
+			"PictureA3Logo",
+			"PictureBIlogo",
+			"PicturePhysXLogo",
+			"LegalText"
+		};
+		class PictureA3Logo: RscPicture
+		{
+			idc=1200;
+			text="\TGV_Assets\paa\logoA3Tgv.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (36 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (13.7 * 		(0.025 * SafezoneH)) / 2";
+			w="8 * 		(0.01875 * SafezoneH)";
+			h="4 * 		(0.025 * SafezoneH)";
+		};
+		class PictureBIlogo: RscPicture
+		{
+			idc=1201;
+			text="\A3\Ui_f\data\IGUI\RscTitles\SplashBohemia\bi_logo_small_ca.paa";
+			x="SafeZoneX + SafeZoneW / 2 - (33 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (25.7 * 		(0.025 * SafezoneH)) / 2";
+			w="32 * 		(0.01875 * SafezoneH)";
+			h="16 * 		(0.025 * SafezoneH)";
+		};
+		class PicturePhysXLogo: RscPictureKeepAspect
+		{
+			idc=1202;
+			text="\TGV_Assets\paa\POWEREDBYMT_ca.paa";
+			x="SafeZoneX + SafeZoneW / 2 + (16.5 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH / 2 - (13.6 * 		(0.025 * SafezoneH)) / 2";
+			w="16 * 		(0.01875 * SafezoneH)";
+			h="4 * 		(0.025 * SafezoneH)";
+		};
+		class LegalText: RscStructuredText
+		{
+			idc=-1;
+			text="NOUS SOMMES VIEUX,NOUS SOMMES CORIACES, NOUS SOMMES ARMA!";
+			size="0.02 * SafezoneH";
+			shadow=0;
+			x="SafeZoneX + SafeZoneW / 2 - (50 * 		(0.01875 * SafezoneH)) / 2";
+			y="SafeZoneY +	SafeZoneH - (0.38 * SafezoneH)";
+			w="50 * 		(0.01875 * SafezoneH)";
+			h="0.39 * SafezoneH";
+			class Attributes
+			{
+				align="center";
+				shadow=0;
+			};
+		};
+	};
+};
+//----------main menu
 class RscDisPlayMain : RscStandardDisplay
 {
 	

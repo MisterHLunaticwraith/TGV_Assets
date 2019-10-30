@@ -93,6 +93,16 @@ class TGV // Defines the "owner"
 			
 			
 		};
+	class TGV_HadminFuncs
+	{
+	tag = "TGV";
+	file = "\TGV_Assets\Functions";
+		class saluteH
+		{};
+
+		
+		
+	};
 	
 };
 		

@@ -1,0 +1,1 @@
+["TGV_SaluteMRH_event",player] call CBA_fnc_globalEvent;
