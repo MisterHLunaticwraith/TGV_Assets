@@ -6,6 +6,24 @@ sound[]  = {"\TGV_Assets\Sounds\TGV_Sounds_Drinking.ogg", 5, 1, 25};
 titles[] = {};
 
 };
+
+class TGV_safeStartOn
+{
+
+name     = "TGV_safeStartOn";
+sound[]  = {"\TGV_Assets\Sounds\TGV_safeStartOn.ogg", 5, 1, 25};
+titles[] = {};
+
+};
+
+class TGV_safeStartOff
+{
+
+name     = "TGV_safeStartOff";
+sound[]  = {"\TGV_Assets\Sounds\TGV_safeStartOff.ogg", 5, 1, 25};
+titles[] = {};
+
+};
 //template
 /*
 class TGV_Radio_

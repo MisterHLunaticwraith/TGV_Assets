@@ -104,6 +104,41 @@ class TGV // Defines the "owner"
 		
 	};
 	
+	class TGV_FrameWorkFuncs
+	{
+	tag = "TGV";
+	file = "\TGV_Assets\Functions";
+		class stopSafeStart
+		{};
+		class startSafeStart
+		{};
+		class addAdminMenu
+		{};
+		class briefingGuides
+		{};
+		class onPlayerKilled
+		{};
+		class onPlayerRespawn
+		{};
+		class onPlayerKilledTemplate
+		{};
+		class onPlayerRespawnTemplate
+		{};
+		class spectate
+		{};
+		class isRespawnObject
+		{};
+		class isSpectatorComputer
+		{};
+		class setIndeAllegiance
+		{};
+
+
+
+		
+		
+	};
+	
 };
 		
 		

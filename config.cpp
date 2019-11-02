@@ -34,9 +34,9 @@ class CfgPatches {
 		weapons[] = {"U_BasicBody"}; //
 		requiredVersion = 0.1; //
 		requiredAddons[] = {"A3_Weapons_F_Ammoboxes","A3_Characters_F","cba_main","cTab"}; // achequer
-		version = 1.0.8;
-		versionStr = "1.0.8";
-		versionAr[] = {1,0,8};
+		version = 1.0.9;
+		versionStr = "1.0.9";
+		versionAr[] = {1,0,9};
 		versionDesc = "TGV Assets";
 		versionAct = "call compile preProcessFileLineNumbers '\TGV_Assets\about.sqf'";
 		author = "Mr H. & TGV members";
@@ -154,6 +154,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Les méchants"; // Name visible in the list
 	};
+	class EdSubCat_TGV_respawns
+	{
+		displayName = "Respawns TGV";
+	};
 };
 	class CfgMarkerClasses
 	{
@@ -179,6 +183,7 @@ class cfgVehicles
 #include "\TGV_Assets\TGV_clothesV.hpp"
 #include "\TGV_Assets\TGV_Villains.hpp"
 #include "\TGV_Assets\TGV_Vehicles.hpp"
+#include "\TGV_Assets\TGV_respawnObjects.hpp"
 };
 class cfgMRHFactionSounds 
 {
@@ -467,6 +472,8 @@ class RscTitles
 			};
 		};
 	};
+	#include "\TGV_Assets\dialogs\TGV_message.hpp"
+	
 };
 //----------main menu
 class RscDisPlayMain : RscStandardDisplay
@@ -507,6 +514,12 @@ class RscDisPlayMain : RscStandardDisplay
 #include "\TGV_Assets\dialogs\villainCreator.hpp"
 #include "\TGV_Assets\dialogs\genResults.hpp"
 #include "\TGV_Assets\dialogs\paiescreen.hpp"
+
+//class RscTitles
+//{//#include "\TGV_Assets\dialogs\TGV_message.hpp"
+	//#include "\TGV_Assets\dialogs\TGV_message.hpp"
+//};
+
 class Extended_PreInit_EventHandlers
 {
    class TGV_CBA_Settings
@@ -522,9 +535,15 @@ class Extended_PreInit_EventHandlers
 };
 class Extended_PostInit_EventHandlers
 {
-   class TGV_CBA_XEH
+	
+	class TGV_CBA_XEH
    {
-      clientInit = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh.sqf'";
+      init = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh.sqf'";
+   }; 
+
+   class TGV_CBA_XEH_client
+   {
+      clientInit = "call compile preProcessFileLineNumbers '\TGV_Assets\Functions\cba_xeh_client.sqf'";
    }; 
 
    class TGV_CBA_XEH_server
@@ -561,3 +580,15 @@ class MRH_SoldierTabIntelPictures
 {
 #include "\TGV_Assets\TGV_TabPics.hpp"	
 };
+
+class CfgRespawnTemplates {
+    class TGV_rsp_tp {
+        displayName = "Respawn TGV";
+        onPlayerKilled = "TGV_fnc_onPlayerKilledTemplate";
+        onPlayerRespawn = "TGV_fnc_onPlayerRespawnTemplate";
+		respawnDelay = 10;
+		respawnOnStart = -1;
+        respawnTypes[] = {3};
+    };
+};
+
