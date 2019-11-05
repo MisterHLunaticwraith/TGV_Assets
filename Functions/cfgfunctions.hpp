@@ -132,6 +132,10 @@ class TGV // Defines the "owner"
 		{};
 		class setIndeAllegiance
 		{};
+		class briefingFromMissionConfig
+		{};
+		class getFactions
+		{};
 
 
 

@@ -20,6 +20,16 @@
 					icon = "";
 					
 				};
+
+				class TGV_ShowNotes
+				{
+					displayName = "Voir le carnet de notes";
+					condition = "true";
+					exceptions[] = {"IsNotInside","isNotSitting","notOnMap"};
+					statement = "createDialog 'TGV_quickNotePad'";
+					icon = "";
+					
+				};
             };
 
             class MRH_AdminActions {

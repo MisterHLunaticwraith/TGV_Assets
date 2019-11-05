@@ -224,6 +224,8 @@ class RscControlsGroup;
 class RscText;
 class RscPictureKeepAspect;
 class Logo;
+class RscEdit;
+class RscButton;
 class RscDisplayStart: RscStandardDisplay
 {
 	class controls
@@ -504,16 +506,28 @@ class RscDisPlayMain : RscStandardDisplay
 		};
 	};
 };
-//class Logo;
-/*
-#include "\TGV_Assets\TGV_facewear.hpp"
-#include "\TGV_Assets\Models\model.cfg"
-*/
+//-----tests
 #include "\TGV_Assets\TGV_FacesAndHeads.hpp"
 #include "\TGV_Assets\dialogs\welcomeDial.hpp"
 #include "\TGV_Assets\dialogs\villainCreator.hpp"
 #include "\TGV_Assets\dialogs\genResults.hpp"
 #include "\TGV_Assets\dialogs\paiescreen.hpp"
+#include "\TGV_Assets\dialogs\notepad.hpp"
+
+class RscDisplayGetReady;
+class RscDisplayServerGetReady : RscDisplayGetReady
+{
+	class controls 
+	{
+		#include "\TGV_Assets\dialogs\notepadRscDisplayGetReady.hpp"
+	};
+};
+//class Logo;
+/*
+#include "\TGV_Assets\TGV_facewear.hpp"
+#include "\TGV_Assets\Models\model.cfg"
+*/
+
 
 //class RscTitles
 //{//#include "\TGV_Assets\dialogs\TGV_message.hpp"
@@ -592,3 +606,25 @@ class CfgRespawnTemplates {
     };
 };
 
+class CfgDebriefing
+{
+	class TGV_fin_echec
+	{
+		title = "Echec de la mission";
+		subtitle = "Vous avez perdu trop d'hommes.";
+		description = "Trop d'hommes sont morts dans la bataille, la  mission est un échec.";
+		pictureBackground = "\TGV_Assets\paa\GenPics\deathscreen.jpg";
+		picture = "\TGV_Assets\paa\GenPics\tgv.paa";
+	
+	};
+
+	class TGV_fin_victoire
+	{
+		title = "Victoire";
+		subtitle = "La mission est  réussie";
+		description = "Vous avez brillament accompli votre mission, bravo!";
+		pictureBackground = "\TGV_Assets\paa\GenPics\victory.jpg";
+		picture = "\TGV_Assets\paa\GenPics\tgv.paa";
+		
+	};
+};
