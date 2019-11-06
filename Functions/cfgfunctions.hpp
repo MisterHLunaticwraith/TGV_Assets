@@ -138,6 +138,14 @@ class TGV // Defines the "owner"
 		{};
 		class SMEPPBriefing
 		{};
+		class returnPlayingSquads
+		{};
+		class introCredits
+		{};
+		class endCredits
+		{};
+		class aliasCutScene
+		{};
 
 
 
