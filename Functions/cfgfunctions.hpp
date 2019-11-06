@@ -146,6 +146,10 @@ class TGV // Defines the "owner"
 		{};
 		class aliasCutScene
 		{};
+		class drawUnitsTags
+		{};
+		class toggleTags
+		{};
 
 
 

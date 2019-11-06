@@ -1,6 +1,6 @@
 // by ALIAS modified by Mr H.
 private ["_screen_sfx","_effect_screen","_tranz","_tranz_dur","_tanz_eff_1","_tanz_eff_2","_tranz_screen","_sleep_tranz"];
-params ["_campos1","_campos2","_targetcam","_camera_duration","_zoom_level1","_zoom_level2","_cam_attached","_rel","_screen_sfx","_tranz","_tranz_dur",["_isLastShot",false]];
+params ["_campos1","_campos2","_targetcam","_camera_duration","_zoom_level1","_zoom_level2","_cam_attached","_rel","_screen_sfx","_tranz","_tranz_dur",["_isLastShot",false],["_showBorders",true]];
 _rel params ["_x_coord","_y_coord","_z_coord"];
 switch (_screen_sfx) do {
 	case "none": {
@@ -74,9 +74,13 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 		};
 	
 		_camera = "camera" camCreate (getpos _campos1);
-				showCinemaBorder true;
+				
+
 		_camera attachTo [_targetCam, [_x_coord,_y_coord,_z_coord]];		
 		_camera cameraEffect ["internal", "BACK"];
+		showCinemaBorder _showBorders;
+		cameraEffectEnableHUD !(_showBorders);
+		showHUD !(_showBorders);
 		_camera camCommand "inertia off";
 		_camera camPrepareTarget _targetcam;
 		_camera camPrepareFOV _zoom_level2;
@@ -108,6 +112,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 			
 			if(alive _camera)then {camDestroy _camera};
 			player cameraEffect ["terminate","back"];
+			showHUD true;
 		};
 
 		
@@ -124,8 +129,11 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 
 	// initial/start position where camera is created
 	_camera = "camera" camCreate (ASLToAGL(getposASL _campos1));
-			showCinemaBorder true;
+							
 	_camera cameraEffect ["internal", "BACK"];
+	showCinemaBorder _showBorders;
+				cameraEffectEnableHUD !(_showBorders);
+				showHUD !(_showBorders);
 	_camera camCommand "inertia on";
 	_camera camPrepareTarget _targetcam;
 	_camera camPrepareFOV _zoom_level1;
@@ -163,6 +171,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 			
 			if(alive _camera)then {camDestroy _camera};
 			player cameraEffect ["terminate","back"];
+			showHUD true;
 		};
 	};
 

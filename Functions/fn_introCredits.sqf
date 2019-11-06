@@ -39,7 +39,7 @@ params [["_onScreenTime",4],["_font","PuristaLight"],["_shadow",0],["_sizeHeader
 		_finalText = _finalText + (format ["<t size='%2' color='%3' align='right' font = '%1' shadow= '%4'>",_font,_sizeCore,_colorCore,_shadow]);
 		{_finalText = _finalText + format ["%1<br />", _x]} forEach _memberNames;
 		_finalText = _finalText + "</t>";
-		copyToClipboard _finalText;
+
 		_onScreenTime + (((count _memberNames) - 1) * 0.5);
 		[
 		_finalText,
