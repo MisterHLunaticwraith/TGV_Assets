@@ -1,7 +1,7 @@
 if ((str missionConfigFile)isEqualTo "") exitWith {diag_log "Mission has no description.ext"};
 if !(isClass (missionConfigFile>>"cfgTGVmissions")) exitWIth {diag_log "mission doesn't use TGV FrameWork"};
 private _cfg = (missionConfigFile>>"cfgTGVmissions");
-private _missionPic = "Scenario" get3DenMissionAttribute "overViewPicture";
+private _missionPic = getText (_cfg>>"missionInfo">>"missionPicture");
 private _frameWorkVersion = getText (_cfg>>"FrameWorkVersion">>"versionStr");
 private _missionAuthors =getArray (_cfg>>"missionInfo">>"authors");
 private _missionAuthorsLogo =getArray (_cfg>>"missionInfo">>"authorsLogos");

@@ -68,6 +68,7 @@ if (_consumeItem in ["TGV_Beer_Item","TGV_Beer_Item_half"]) then
 // ajouter les infos 
 call TGV_fnc_briefingGuides;
 call TGV_fnc_briefingFromMissionConfig;
+call TGV_fnc_addAdminMenu;
 //Dans le scope ci-dessous, tout ce qui doit s'executer quand le joueur est initialisé
 [{(player == player) && (!isNull (findDisplay 46))}, {
     call TGV_fnc_welcomeMenuInit;

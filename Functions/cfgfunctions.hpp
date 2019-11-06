@@ -136,6 +136,8 @@ class TGV // Defines the "owner"
 		{};
 		class getFactions
 		{};
+		class SMEPPBriefing
+		{};
 
 
 

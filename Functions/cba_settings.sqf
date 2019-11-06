@@ -23,6 +23,8 @@ private _defaultText = "<img size = '15' image ='\TGV_Assets\paa\armaOpBack.paa'
 
 ["TGV_useFactionSpecificBrief", "CHECKBOX",   ["Utiliser un briefing par faction","Voir framework,initplayerlocal"], ["Réglages TGV", "Réglages du framework de mission TGV"],false,1] call cba_settings_fnc_init;
 
+["TGV_NotePadDefaultNotes", "EDITBOX",   ["Notes par défaut du notepad","Vous pouvez définir des notes par défaut pour le carnet de note ici"], ["Réglages TGV", "Réglages du framework de mission TGV"],"Vous pouvez prendre des notes ici. SHIFT + ENTER pour saut de ligne",1] call cba_settings_fnc_init;
+
 ["TGV_RSP_respOnStartPos", "CHECKBOX",   ["Respawn sur position de départ","Le joueur respawnera sur sa position de départ"], ["Réglages TGV", "Réglages du framework de mission TGV - Respawn (ces réglages ne sont pris en compte que si vous utilisez le mode de respawn>>Custom>>Respawn TGV)"],false,1] call cba_settings_fnc_init;
 
 ["TGV_RSP_respOnRspPos", "CHECKBOX",   ["Respawn sur point respawn TGV","Placer un objet 'TGV Respawn par side', le joueur respawnera sur cet objet"], ["Réglages TGV", "Réglages du framework de mission TGV - Respawn (ces réglages ne sont pris en compte que si vous utilisez le mode de respawn>>Custom>>Respawn TGV)"],true,1] call cba_settings_fnc_init;

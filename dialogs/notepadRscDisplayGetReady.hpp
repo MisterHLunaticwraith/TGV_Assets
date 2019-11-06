@@ -30,7 +30,7 @@ class TGV_EditZoneTGVMenus : RscEditTGVMenus
 {
 	idc = TGV_EDIT_IDC;
 	show = false;
-	onLoad = "params ['_ctrl','_parentCfg'];private _txt = uiNamespace getVariable ['TGV_notes',''];_ctrl ctrlSetText _txt";
+	onLoad = "params ['_ctrl','_parentCfg'];private _txt = uiNamespace getVariable ['TGV_notes',(['TGV_NotePadDefaultNotes']call cba_settings_fnc_get)];_ctrl ctrlSetText _txt";
 	onChar= "uiNamespace setVariable ['TGV_notes',(ctrlText (_this select 0))];";
 	TGV_CAN_MOVE;
 	text = "";

@@ -20,6 +20,14 @@
 					icon = "";
 					
 				};
+            };
+			class TGV_NotepadActions {
+                displayName = "Notes";
+				condition = "true";
+				exceptions[] = {"isNotInside","isNotSitting","notOnMap"};
+				statement = "";
+				icon = "";
+
 
 				class TGV_ShowNotes
 				{
