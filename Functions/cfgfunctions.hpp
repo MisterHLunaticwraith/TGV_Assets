@@ -150,6 +150,10 @@ class TGV // Defines the "owner"
 		{};
 		class toggleTags
 		{};
+		class genericEndCutscene
+		{};
+		class startGenericEndCutscene
+		{};
 
 
 

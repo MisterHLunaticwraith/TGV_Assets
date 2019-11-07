@@ -11,6 +11,8 @@ private _defaultText = "<img size = '15' image ='\TGV_Assets\paa\armaOpBack.paa'
 
 ["TGV_StartWithafeStartEnabled", "CHECKBOX",   ["Activer le safe start au début de la mission","Le safe start désactive toutes les armes joueurs et IA,aussi utile pour débugguer! Si ce réglage est activé le safe start est automatiquement lancé en début de mission. Pour y mettre fin, passer par le menu admin du briefing."], ["Réglages TGV", "Réglages du framework de mission TGV"],true,1] call cba_settings_fnc_init;
 
+["TGV_ShowTagsDuringSafeStart", "CHECKBOX",   ["Montrer les tags des joueurs pendant le safe start","Pendant le safe start les tags des joueurs sont affichés, ils sont cachés à la fin du safe start"], ["Réglages TGV", "Réglages du framework de mission TGV"],true,1] call cba_settings_fnc_init;
+
 ["TGV_playTGV_vidAtstartUp", "CHECKBOX",   ["Jouer la vidéo TGV au départ de la mission","Joue la vidéo TGV au départ de la mission"], ["Réglages TGV", "Réglages du framework de mission TGV"],true,1] call cba_settings_fnc_init;
 
 ["TGV_playTGV_vidAtstartUpUnSkip", "CHECKBOX",   ["Utiliser la version non skippable de la vidéo","Si vous cochez cette case la vidéo ne pourra pas être skippée."], ["Réglages TGV", "Réglages du framework de mission TGV"],false,1] call cba_settings_fnc_init;

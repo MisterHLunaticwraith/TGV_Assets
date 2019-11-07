@@ -78,7 +78,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 
 		_camera attachTo [_targetCam, [_x_coord,_y_coord,_z_coord]];		
 		_camera cameraEffect ["internal", "BACK"];
-		showCinemaBorder _showBorders;
+		showCinemaBorder true;
 		cameraEffectEnableHUD !(_showBorders);
 		showHUD !(_showBorders);
 		_camera camCommand "inertia off";
@@ -131,7 +131,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 	_camera = "camera" camCreate (ASLToAGL(getposASL _campos1));
 							
 	_camera cameraEffect ["internal", "BACK"];
-	showCinemaBorder _showBorders;
+	showCinemaBorder true;
 				cameraEffectEnableHUD !(_showBorders);
 				showHUD !(_showBorders);
 	_camera camCommand "inertia on";

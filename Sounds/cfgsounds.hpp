@@ -199,4 +199,16 @@ titles[] = {};
 soundLength = 291; 
 };
 
+class TGV_FF7_victory
+{
+musicClass = "TGV_SoundTrack";
+duration = 54;
+tags[] = {};
+theme = "action";
+type = "soundtrack";
 
+name     = "FF7 victory fanfare";
+sound[]  = {"\TGV_Assets\Sounds\TGV_FF7_victory.ogg", 2, 1, 25};
+titles[] = {};
+soundLength = 54; 
+};

@@ -11,7 +11,7 @@
 ] call CBA_fnc_addEventHandler;
 
 
-
+["TGV_start_genericCutScene",{_this call TGV_fnc_genericEndCutscene}]call CBA_fnc_addEventHandler;
 
 
 

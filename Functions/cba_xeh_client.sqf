@@ -69,10 +69,10 @@ if (_consumeItem in ["TGV_Beer_Item","TGV_Beer_Item_half"]) then
 ["TGV_drawTags_event",
 	{
 		if!(hasInterface) exitWith {};
-		params [["_draw",true]];
+		params [["_draw",true],["_useDrawRatio",true]];
 		missionNamespace setVariable ["TGV_DrawTags",false];//stops any previous iteration
 		missionNamespace setVariable ["TGV_DrawTags",_draw];
-		if (_draw) then {call TGV_fnc_drawUnitsTags};
+		if (_draw) then {_useDrawRatio call TGV_fnc_drawUnitsTags};
 	}
 
 ] call CBA_fnc_addEventHandler;

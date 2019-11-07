@@ -26,8 +26,19 @@ Rendre ennemis avec BLUFOR</execute><br/>
 Rendre amis avec OPFOR</execute><br/>
 |- <execute expression=""[east,0]call TGV_fnc_setIndeAllegiance;hint 'Inde maintenant ennemis avec OPFOR'"">
 Rendre ennemis avec OPFOR</execute><br/>
+<br/><br/>
 
+<font size='18'>TAGS DES JOUEURS</font><br/>
+|- <execute expression=""call TGV_fnc_toggleTags; hint 'tags affichés'"">
+Montrer les tags des joueurs </execute><br/>
+|- <execute expression=""false call TGV_fnc_toggleTags; hint 'tags cachés'"">
+Cacher les tags des joueurs</execute><br/>
+<br/><br/>
 
+<font size='18'>METTRE FIN A LA MISSION</font><br/>
+|- <execute expression=""call TGV_fnc_startGenericEndCutscene"">
+Joue la cutscene de fin générique et termine la mission</execute><br/>
+<br/><br/>
 ";
 
 

@@ -1,10 +1,12 @@
 
 
+params [["_useDrawRatio",true]];
 _handle = [
 	{
+		params [["_useDrawRatio",true]];
 		{
 			private _squadInfo = squadParams _x;
-			private _texture = "";
+			private _texture = "\TGV_Assets\paa\loser_ca.paa";
 			private _name = name _x;
 			
 			if !(_squadInfo isEqualTo [])then
@@ -15,12 +17,22 @@ _handle = [
 			};
 			
 			
-
-			//drawIcon3D [_texture,[1,1,1,1],(ASLToAGL(_x modelToWorld [0,0,1.8])), 1, 1,90,_name,true,1,"PuristaLight","center",false];
-			drawIcon3D [_texture, [1,1,1,1],(_x modelToWorld [0,0,2.5]), 4, 4, 0, _name,2, 0.2, "PuristaMedium","center"];
-		}forEach allPlayers;
+			if (_useDrawRatio) then 
+			{
+				private _distance = _x distance player;
+				if (_x isEqualTo player)then {_distance =1};
+				if (_distance <30) then {
+					drawIcon3D [_texture, [1,1,1,1],(_x modelToWorld [0,0,2.5]),(4/_distance),(4/_distance), 0, _name,2, (0.2/_distance), "PuristaMedium","center"];
+				};
+			}
+			else
+			{
+				drawIcon3D [_texture, [1,1,1,1],(_x modelToWorld [0,0,2.5]),4,4, 0, _name,2, 0.2, "PuristaMedium","center"];
+			};
+			
+		}forEach playableUnits;//allPlayers
 	},
-	[],
+	_useDrawRatio,
 	{},
 	{missionNamespace getVariable ["TGV_DrawTags",true]}
 ] call MRH_fnc_MilsimTools_Core_conditionalPFEH;
