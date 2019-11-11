@@ -35,7 +35,7 @@ theme = "action";
 type = "soundtrack";
 
 name     = "";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = ; 
 };
@@ -44,7 +44,7 @@ class TGV_Radio_HeyHey
 {
 
 name     = "Neil Young - Hey Hey My My";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_HeyHey.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_HeyHey.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 313; 
 
@@ -58,7 +58,7 @@ class TGV_Radio_RegJohn
 {
 
 name     = "QOTSA - Regular John";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_RegJohn.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_RegJohn.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 275; 
 
@@ -72,7 +72,7 @@ class TGV_Radio_Thong
 {
 
 name     = "Kyuss - Thong Song";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_Thong.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_Thong.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 227; 
 
@@ -89,7 +89,7 @@ class TGV_Radio_BlietzkriegBop
 {
 
 name     = "Ramones - Blietzkrieg Bop";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_BlietzkriegBop.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_BlietzkriegBop.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 144;
 
@@ -103,7 +103,7 @@ class TGV_Radio_DownRodeo
 {
 
 name     = "RATM - Down Rodeo";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DownRodeo.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DownRodeo.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 320;
 
@@ -117,7 +117,7 @@ class TGV_Radio_LemonToAKnife
 {
 
 name     = "The Wombats - Lemon to a knife fight";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_LemonToAKnife.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_LemonToAKnife.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 203; 
 
@@ -132,7 +132,7 @@ class TGV_Radio_FortunateSon
 {
 
 name     = "Creedance Clearwater Revival - Fortunate Son";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_FortunateSon.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_FortunateSon.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 141;
 
@@ -152,7 +152,7 @@ theme = "action";
 type = "soundtrack";
 
 name     = "Godspeed You! Black Emperor - Dead Flag Blues";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DeadFlagBlues.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DeadFlagBlues.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 90; 
 };
@@ -166,7 +166,7 @@ theme = "action";
 type = "soundtrack";
 
 name     = "Mozart - Dies Irae";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DiesIrae.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_DiesIrae.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 80; 
 };
@@ -180,7 +180,7 @@ theme = "action";
 type = "soundtrack";
 
 name     = "The Rolling Stones - Paint It Black";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_PaintItBlack.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_PaintItBlack.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 226; 
 };
@@ -194,7 +194,7 @@ theme = "action";
 type = "soundtrack";
 
 name     = "Philip Glass -Satyagraha - Act II: Tagore - Confrontation & Rescue";
-sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_Satyagraha.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_Satyagraha.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 291; 
 };
@@ -208,7 +208,35 @@ theme = "action";
 type = "soundtrack";
 
 name     = "FF7 victory fanfare";
-sound[]  = {"\TGV_Assets\Sounds\TGV_FF7_victory.ogg", 2, 1, 25};
+sound[]  = {"\TGV_Assets\Sounds\TGV_FF7_victory.ogg", 30, 1, 25};
 titles[] = {};
 soundLength = 54; 
+};
+
+class TGV_Radio_WarPigs
+{
+musicClass = "TGV_SoundTrack";
+duration = 474;
+tags[] = {};
+theme = "action";
+type = "soundtrack";
+
+name     = "Black Sabbath - War Pigs";
+sound[]  = {"\TGV_Assets\Sounds\TGV_Radio_WarPigs.ogg", 30, 1, 25};
+titles[] = {};
+soundLength = 474; 
+};
+
+class TGV_Silence
+{
+musicClass = "TGV_SoundTrack";
+duration = 2;
+tags[] = {};
+theme = "action";
+type = "soundtrack";
+
+name     = "2 secondes de silence pour couper les musiques";
+sound[]  = {"\TGV_Assets\Sounds\TGV_Silence.ogg", 30, 1, 25};
+titles[] = {};
+soundLength = 2; 
 };

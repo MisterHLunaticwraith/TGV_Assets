@@ -189,7 +189,7 @@ class cfgMRHFactionSounds
 {
 	class TGVRadio 
 	{
-	allSounds[] = {"TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife","TGV_Radio_FortunateSon","TGV_Radio_DeadFlagBlues","TGV_Radio_DiesIrae","TGV_Radio_PaintItBlack","TGV_Radio_Satyagraha"}; 
+	allSounds[] = {"TGV_Radio_WarPigs","TGV_Radio_HeyHey","TGV_Radio_RegJohn","TGV_Radio_Thong","TGV_Radio_BlietzkriegBop","TGV_Radio_DownRodeo","TGV_Radio_LemonToAKnife","TGV_Radio_FortunateSon","TGV_Radio_DeadFlagBlues","TGV_Radio_DiesIrae","TGV_Radio_PaintItBlack","TGV_Radio_Satyagraha"}; 
 	};
 };
 class CfgUnitInsignia

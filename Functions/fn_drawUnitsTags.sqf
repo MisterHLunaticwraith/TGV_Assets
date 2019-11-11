@@ -30,7 +30,7 @@ _handle = [
 				drawIcon3D [_texture, [1,1,1,1],(_x modelToWorld [0,0,2.5]),4,4, 0, _name,2, 0.2, "PuristaMedium","center"];
 			};
 			
-		}forEach playableUnits;//allPlayers
+		}forEach allPlayers;//allPlayers
 	},
 	_useDrawRatio,
 	{},
