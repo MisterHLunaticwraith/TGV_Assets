@@ -78,6 +78,18 @@
 			mass=40;
 		};
 	};
+	class ODA_BlackFatigues_Tee : TGV_Black_Fatigues_Tee
+	{
+		displayName = "Uniforme ODA";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass= ODA_SoldierFatigues;
+            //uniformClass="TGV_BasicBody_Black";
+			containerClass="Supply40";
+			mass=40;
+		};
+	};
 	//class V_Press_F;
 	class ItemCore;
     class Vest_Camo_Base: ItemCore

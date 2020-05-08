@@ -27,3 +27,20 @@
    //nakedUniform="TGV_BasicBody_Black";
    //uniformClass="TGV_BasicBody_Black";
     };
+
+    class ODA_SoldierFatigues : B_soldier_AR_F
+    {
+		displayName = "ODA Soldier";
+		//scope = 0;
+		hiddenSelections[]=
+		{
+			"camo","camo2"
+		};
+    hiddenSelectionsTextures[]=
+		{
+			"\a3\characters_f\blufor\data\clothing1_co.paa","\TGV_Assets\paa\Uniforms\ODA_Shirt_co.paa"
+		};
+    uniformClass="ODA_BlackFatigues_Tee";
+   //nakedUniform="TGV_BasicBody_Black";
+   //uniformClass="TGV_BasicBody_Black";
+    };

@@ -1,6 +1,6 @@
 // by ALIAS modified by Mr H.
 private ["_screen_sfx","_effect_screen","_tranz","_tranz_dur","_tanz_eff_1","_tanz_eff_2","_tranz_screen","_sleep_tranz"];
-params ["_campos1","_campos2","_targetcam","_camera_duration","_zoom_level1","_zoom_level2","_cam_attached","_rel","_screen_sfx","_tranz","_tranz_dur",["_isLastShot",false],["_showBorders",true]];
+params ["_campos1","_campos2","_targetcam","_camera_duration","_zoom_level1","_zoom_level2","_cam_attached","_rel","_screen_sfx","_tranz","_tranz_dur",["_isLastShot",false],["_showBorders",true],["_accFactor",1]];
 _rel params ["_x_coord","_y_coord","_z_coord"];
 switch (_screen_sfx) do {
 	case "none": {
@@ -84,11 +84,11 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 		_camera camCommand "inertia off";
 		_camera camPrepareTarget _targetcam;
 		_camera camPrepareFOV _zoom_level2;
-		_camera camCommitPrepared _camera_duration;
+		_camera camCommitPrepared (_camera_duration/_accFactor);
 		
 
 		
-		sleep _camera_duration-_sleep_tranz;
+		uisleep  _camera_duration -_sleep_tranz;
 		cutText ["", _tanz_eff_2, _sleep_tranz];
 		
 		if (_tranz=="blur") then {
@@ -97,7 +97,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 		_tranz_screen ppEffectAdjust [100];
 		_tranz_screen ppEffectCommit _sleep_tranz; 
 		};				
-		sleep _sleep_tranz;
+		uisleep _sleep_tranz;
 
 		if (_tranz=="blur") then {		
 			_tranz_screen ppEffectEnable false;
@@ -145,9 +145,9 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 	_camera camPreparePos (ASLToAGL(getposASL _campos2));
 	_camera camPrepareTarget _targetcam;
 	_camera camPrepareFOV _zoom_level2;
-	_camera camCommitPrepared _camera_duration;
+	_camera camCommitPrepared (_camera_duration/_accFactor);
 	
-	sleep _camera_duration-_sleep_tranz;
+	uisleep  _camera_duration -_sleep_tranz;
 	cutText ["", _tanz_eff_2, _sleep_tranz];
 	
 	if (_tranz=="blur") then {
@@ -157,7 +157,7 @@ if (_tranz_dur>0) then {_sleep_tranz =_tranz_dur/2;} else {_sleep_tranz=0;};
 	_tranz_screen ppEffectCommit _sleep_tranz; 
 	};	
 	
-	sleep _sleep_tranz;
+	uisleep _sleep_tranz;
 	
 	if (_tranz=="blur") then {		
 		_tranz_screen ppEffectEnable false;
